@@ -1,0 +1,24 @@
+.upload-cover-img{width:100%;height:200px;overflow:hidden;}
+.uploaded-img{
+  width:100px;height:100px;
+  margin-right:10px;
+  margin-bottom:10px;
+  position:relative;
+  float:left;
+}
+.uploaded-img .remove{position:absolute;top: 0px;right: 0px;}
+
+
+.fu-filler{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.fu-filler .fu-img{
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
