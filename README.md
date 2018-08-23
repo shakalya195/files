@@ -1,7 +1,7 @@
 # files
 fileuploader
 
-USING FOR SINGLE IMAGE UPLOAD
+<h2>USING FOR SINGLE IMAGE UPLOAD</h2>
 
 this.file1 = new fileuploader(true,this.us);
 
@@ -14,15 +14,15 @@ file1.file = (file);
 
 Once you call the Upload:Promise it will replace file1.image from base64 to uploaded URL.
 So there will be no chnages while while displaying the image at HTML.
-
+<code>
 this.file1.upload().then(r=>{
   /* operation after upload finished */
 });
+</code>
 
 
 
-
-USING FOR MULTIPLE FILES
+<h2>USING FOR MULTIPLE FILES</h2>
 
 this.file2 = new fileuploader(false,this.us);
 
@@ -35,11 +35,12 @@ file2[1].file = (file);
 Below HTML will generate all multiple images seleted with base64 type.
 You can remove it by file2.remove(index)
 Remember files an't uploaded yet untill you call file2.upload Promise.
+<code>
 <div class="uploaded-img fu-filler" *ngFor="let item of file2.files; let index=index">
     <a class="remove" (click)="file2.remove(index)">Delete</a>
     <img *ngIf="item.image" class="fu-img" [src]="item.image" alt="img">
 </div>
-
+</code>
 Once you call file2.upload Promise. After upload event can be handle under it.
 Upload will replace all file2[index].image from base64 to uploaded URL.
 
